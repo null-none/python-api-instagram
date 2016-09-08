@@ -6,7 +6,7 @@ Install
 
 .. code-block:: bash
 
-    pip install instagram
+    pip install python-api-instagram
 
 =======
 Example
