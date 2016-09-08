@@ -14,7 +14,7 @@ Example
 
 .. code-block:: python
 
-    from instagramAPI import instagramAPI
+    from python_api_instagram.instagramAPI import instagramAPI
 
     access_token = '3403089465.260c1aa.b09a16*03c24435880d3fe195*f8f156
 
