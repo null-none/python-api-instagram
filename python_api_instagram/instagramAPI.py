@@ -34,3 +34,7 @@ class instagramAPI(object):
     def media_self_recent(self):
         r = requests.get('{0}/users/self/media/recent?access_token={1}'.format(self.url, self.access_token))
         return r.text
+
+    def relationship(self, user_id, action):
+        r = requests.get('{0}/users/{1}/relationshipt?access_token={2}&action={3}'.format(self.url, user_id, self.access_token, action))
+        return r.text

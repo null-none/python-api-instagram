@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='python-api-instagram',
-    version='0.0.4',
+    version='0.0.5',
     packages=find_packages(),
     author='Dmitry Kalinin',
     author_email='dmitry.kalinin.email@gmail.com',
