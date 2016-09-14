@@ -35,6 +35,26 @@ class instagramAPI(object):
         r = requests.get('{0}/users/self/media/recent?access_token={1}'.format(self.url, self.access_token))
         return r.text
 
-    def relationship(self, user_id, action):
-        r = requests.get('{0}/users/{1}/relationshipt?access_token={2}&action={3}'.format(self.url, user_id, self.access_token, action))
+    def actions_relationship(self, user_id, action):
+        data = {
+            'access_token': self.access_token,
+            'action': action
+        }
+        r = requests.post('{0}/users/{1}/relationship?access_token={2}'.format(self.url, user_id, self.access_token), data=data)
+        return r.text
+
+    def relationship(self, user_id):
+        r = requests.get('{0}/users/{1}/relationship?access_token={2}&action={3}'.format(self.url, user_id, self.access_token))
+        return r.text
+
+    def requested_by(self):
+        r = requests.get('{0}/users/{1}/users/self/requested-by?access_token={1}'.format(self.url, self.access_token))
+        return r.text
+
+    def followed_by(self):
+        r = requests.get('{0}/users/{1}/users/self/followed-by?access_token={1}'.format(self.url, self.access_token))
+        return r.text
+
+    def follows(self):
+        r = requests.get('{0}/users/{1}/users/self/follows?access_token={1}'.format(self.url, self.access_token))
         return r.text

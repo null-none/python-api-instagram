@@ -34,6 +34,16 @@ Example
 
     print instagram.media('1306717096452924663_3403089465')
 
+    print instagram.actions_relationship(3403089465, 'follow')
+
+    print instagram.relationship(3403089465)
+
+    print instagram.requested_by()
+
+    print instagram.followed_by()
+
+    print instagram.follows()
+
 =======
 License
 =======
