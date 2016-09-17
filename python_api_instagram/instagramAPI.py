@@ -58,3 +58,15 @@ class instagramAPI(object):
     def follows(self):
         r = requests.get('{0}/users/{1}/users/self/follows?access_token={1}'.format(self.url, self.access_token))
         return r.text
+
+    def locations(self, location_id):
+        r = requests.get('{0}/locations/{1}?access_token={2}'.format(self.url, location_id, self.access_token))
+        return r.text
+
+    def locations_media_recent(self, location_id):
+        r = requests.get('{0}/locations/{1}/media/recent?access_token={2}'.format(self.url, location_id, self.access_token))
+        return r.text
+
+    def locations_search(self, lat, lng):
+        r = requests.get('{0}/locations/search?lat={1}&lng={2}&access_token={3}'.format(self.url, lat, lng, self.access_token))
+        return r.text

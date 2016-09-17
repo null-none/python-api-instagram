@@ -44,6 +44,12 @@ Example
 
     print instagram.follows()
 
+    print instagram.locations(514276)
+
+    print instagram.locations_media_recent(514276)
+    
+    print instagram.locations_search(37.77493, -122.419415)
+
 =======
 License
 =======
